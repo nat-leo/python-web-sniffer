@@ -1,6 +1,5 @@
 # Scapy Web Sniffer
 
-
 On Server:
 ```
 natleo@Nats-MacBook-Air web-sniffer % python3 src/web.py 
@@ -36,7 +35,10 @@ git clone https://github.com/nat-leo/python-web-sniffer.git
 
 ## Getting Started 
 
-Run the server (last run using Python 3.8.9 on Mac with Apple Silicon):
+So far this has been testes with Python 3.8.9 on MacOS with Apple Silicon. Running on windows
+requires admin privledges and Winpcap, and MacOS might require libpcap to run with sudo privledges.
+
+Run the server 
 ```
 python3 -m pip install -r requirements.txt
 python3 src/web.py
