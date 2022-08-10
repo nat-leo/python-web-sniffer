@@ -1,18 +1,32 @@
 # Scapy Web Sniffer
+
+
+On Server:
 ```
-Connected to ws://localhost:5000.
-< Enter a valid URL (ex. www.google.com):
-> cloudnoodlebar.com
-< Sniffing 199.36.158.100... (stopping after 5 packets)
-Connection closed: 1006 (connection closed abnormally [internal]).
+natleo@Nats-MacBook-Air web-sniffer % python3 src/web.py 
+WARNING: No IPv4 address found on anpi1 !
+WARNING: No IPv4 address found on anpi0 !
+WARNING: more No IPv4 address found on en3 !
+```
+
+Interactive Client:
+```
 natleo@Nats-MacBook-Air web-sniffer % python3 -m websockets ws://localhost:5000
 Connected to ws://localhost:5000.
 < Enter a valid URL (ex. www.google.com):
 > cloudnoodlebar.com
-< Sniffing 199.36.158.100... (stopping after 5 packets)
+< Sniffing 199.36.158.100... (Listening for 15 seconds (time checked after every rquest))
+< <Sniffed: TCP:1 UDP:0 ICMP:0 Other:0>
+< <Sniffed: TCP:1 UDP:0 ICMP:0 Other:0>
+< <Sniffed: TCP:1 UDP:0 ICMP:0 Other:0>
+< <Sniffed: TCP:1 UDP:0 ICMP:0 Other:0>
+< <Sniffed: TCP:1 UDP:0 ICMP:0 Other:0>
+< <Sniffed: TCP:1 UDP:0 ICMP:0 Other:0>
+< <Sniffed: TCP:1 UDP:0 ICMP:0 Other:0>
 < All Done! Enter another URL
-Connection closed: 1006 (connection closed abnormally [internal]).
+> 
 ```
+
 ## Installation
 
 Clone the repo:
@@ -24,6 +38,7 @@ git clone https://github.com/nat-leo/python-web-sniffer.git
 
 Run the server (last run using Python 3.8.9 on Mac with Apple Silicon):
 ```
+python3 -m pip install -r requirements.txt
 python3 src/web.py
 ```
 or
