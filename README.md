@@ -17,8 +17,11 @@ Connection closed: 1006 (connection closed abnormally [internal]).
 
 Clone the repo:
 ```
-git clone 
+git clone https://github.com/nat-leo/python-web-sniffer.git
 ```
+
+## Getting Started 
+
 Run the server (last run using Python 3.8.9 on Mac with Apple Silicon):
 ```
 python3 src/web.py
@@ -30,4 +33,8 @@ python src/web.py
 In another terminal, run the client to interact with the websocket:
 ```
 python3 -m websockets ws://localhost:5000
+```
+or
+```
+python -m websockets ws://localhost:5000
 ```
